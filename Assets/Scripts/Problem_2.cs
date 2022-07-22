@@ -10,7 +10,25 @@ public class Problem_2 : MonoBehaviour
     */
     void Start()
     {
-        int[] disorder = new int[3]{0,5,2};
-        bool isInOrder;
-    }
+        int[] disorder = new int[3] { 0, 5, 2 };
+        bool isInOrder = true;
+
+        for (int i = 0; i < disorder.Length; i++)
+        {
+            for (int j = i; j < disorder.Length; j++)
+            {
+                if (disorder[i] > disorder[j])
+                {
+                    isInOrder = false;
+                    break;
+                }
+            }
+            if (!isInOrder)
+            {
+                break;
+            }
+
+        }
+        print("Is in Order:" + isInOrder);
+    } 
 }

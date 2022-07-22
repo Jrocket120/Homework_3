@@ -11,5 +11,29 @@ public class Problem_4 : MonoBehaviour
     */
     void Start()
     {
+        List<int> oddNumbers= new List<int>();
+        for (int i = 0; i < 144; i++) {
+            {
+                if (i % 2 == 1 && i % 7 == 0)
+            { 
+            oddNumbers.Add(i);
+            }
+        }
+        foreach (int j in oddNumbers)
+            {
+                print(j);
+            }
+        }
+        int[] HalfSize = new int[oddNumbers.Count / 2];
+
+        for(int i=0; i< HalfSize.Length; i++)
+        {
+            HalfSize[i] = oddNumbers[i * 2];
+            }
+        foreach(int i in HalfSize)
+        {
+            print(i);
+        
+        }
     }
 }
